@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  check:
+    docker:
+      - image: cimg/base:current
+    steps:
+      - checkout
+      - run: echo "ok"
+workflows:
+  mer-check:
+    jobs:
+      - check
